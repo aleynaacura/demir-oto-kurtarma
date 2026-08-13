@@ -906,19 +906,12 @@ CALL BUTTON
 }
 
 .region-card {
-    position: relative;
-    min-height: 240px;
-    padding: 30px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.05),
-            rgba(255, 255, 255, 0.015)
-        );
-    transition: 0.35s ease;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 20px 0;
+    min-height: auto;
+    box-shadow: none;
 }
 
 .region-card::after {
@@ -1008,25 +1001,19 @@ NEDEN BİZ
     background:#0d0d0d;
 }
 
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-top:60px;
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    width: min(1180px, 92%);
+    margin: 50px auto 0;
 }
 
-.why-card{
-
-    background:#151515;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    padding:35px;
-
-    transition:.35s;
-
+.why-card {
+    padding: 24px 26px;
+    min-height: 220px;
+    height: auto;
 }
 
 .why-card:hover{
@@ -1294,4 +1281,41 @@ grid-template-columns:1fr;
     .hero-card {
         max-width: 100%;
     }
+}
+.contact-content h2 {
+    font-size: 42px;
+}
+.contact a,
+.footer-links a {
+    color: #f59e0b;
+    text-decoration: none;
+}
+
+.contact a:visited,
+.footer-links a:visited {
+    color: #f59e0b;
+}
+.regions h2 {
+    font-size: 42px;
+}
+.about-content h2,
+.services-header h2,
+.story-content h2,
+.gallery-header h2 {
+    font-size: 42px;
+}
+@media (max-width: 1000px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.region-card::before,
+.region-card::after {
+    display: none;
 }
