@@ -1448,3 +1448,58 @@ grid-template-columns:1fr;
         padding: 22px;
     }
 }
+/* TÜM GOOGLE YORUMLARINI GÖR */
+
+.reviews-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.reviews-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    max-width: 380px;
+
+    padding: 14px 28px;
+
+    background: #151515;
+    border: 1px solid rgba(255, 160, 0, 0.45);
+    border-radius: 12px;
+
+    color: #ffa000 !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    transition: 0.3s ease;
+}
+
+.reviews-button:visited {
+    color: #ffa000 !important;
+}
+
+.reviews-button:hover {
+    background: #ffa000;
+    color: #111111 !important;
+    border-color: #ffa000;
+}
+/* Google yorumları butonu */
+a.reviews-button,
+a.reviews-button:link,
+a.reviews-button:visited {
+    color: #ffa000 !important;
+    text-decoration: none !important;
+}
+
+a.reviews-button:hover {
+    color: #ffffff !important;
+}
+
+a.reviews-button:active {
+    color: #ffa000 !important;
+}
